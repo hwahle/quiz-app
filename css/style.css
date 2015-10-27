@@ -1,0 +1,37 @@
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 3em 0;
+    }
+    .masthead-heading {
+        font-size: 3em;
+    }
+}
+
+.masthead {
+    padding: 6em 0;
+  background-image: url('http://i.imgur.com/MsaGaG1.jpg?1');
+   background-repeat: no-repeat;
+    background-size: cover;
+    border-top: solid 1em #838994;
+}
+
+.masthead-heading {
+  /* Layout Declarations */
+    margin-top: -0.2em;
+  /* Typography Declarations */
+    font-family: 'Nixie One', cursive;
+    font-weight: bold;
+    font-size: 6em;
+        color: whitesmoke;
+    text-shadow: 2px 2px 2px #838994, 2px 2px 3px #838994;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+body {
+    /* Typography Declarations */
+    color: #222222;
+    font-size: 1em;
+  margin: 0;
+    font-family: 'Mallanna', sans-serif;
+}
