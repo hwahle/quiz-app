@@ -14,7 +14,7 @@ var $startButton = $('#start');
 var $optionButton = $('.button'); 
 var $userSubmit = $('.user-submit');
 var $nextButton = $('#next');
-var $intro = $('.intro-screen');
+
 
 // JS objects 
 var questions = [{
@@ -53,6 +53,18 @@ var questions = [{
 $quizArea.hide();
 $overlay.hide();
 $quizResults.hide();
+// starts a new game when user clicks on 'START' button
+$startButton.click(startGame);
+
+// initialize function. sets global variables to 0 to keep track of right/wrong answers and fires first question
+function startGame(){
+	var $intro = $('.intro-screen');
+	correct = 0;
+	incorrect = 0;
+	$intro.fadeOut();
+	$quizArea.fadeIn(3000);
+	
+}
 
 })
 

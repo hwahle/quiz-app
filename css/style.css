@@ -47,6 +47,19 @@ body {
 	font-size: 2em;
 }
 
+#user-choice,
+.quiz-area p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2em;
+	color: #da1010;
+	text-align: center;
+}
+
+#user-choice {
+	margin-top: -18px;
+	height: 70px;
+}
+
 #start, #option-1, #option-2, #option-3, #option-4, #answer-submit, #start-over, #next {
 	cursor: pointer;
 	width: 200px;
