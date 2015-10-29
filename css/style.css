@@ -54,7 +54,7 @@ body {
 }
 
 .quiz-area h2 {
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Mallanna', sans-serif;
 	font-size: 2em;
 	margin-top: -36px;
 	text-align: center;	
@@ -72,7 +72,7 @@ body {
 #user-choice,
 .quiz-area p {
 	font-family: 'Mallanna', sans-serif;
-	font-size: 1.5em;
+	font-size: 1em;
 	color: #838994;
 	text-align: center;
 }
@@ -141,14 +141,14 @@ button {
 
 .quiz-results h1,
 .overlay h1 {
-	font-size: 4em;
+	font-size: 2em;
 	color: green;
 	border-bottom: 1px solid #626f77;
 }
 
 .overlay p {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 1.5em;
+	font-family: 'Mallanna', sans-serif;
+	font-size: 1em;
 	color: #626f77;
 	padding-left: 22px;
 	padding-right: 22px;
@@ -169,24 +169,23 @@ button {
 }
 
 .quiz-results p {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 2em;
+	font-family: 'Mallanna', sans-serif;
+	font-size: 1em;
 	color: #626f77;
 	text-align: center;
 	margin-top: 68px;
 }
 
 .quiz-results h2 {
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Mallanna', sans-serif;
 	letter-spacing: 8px;
-	font-size: 2em;
+	font-size: 1em;
 	color: #626f77;
 	text-align: center;	
 }
 
 #user-rating {
 	color: #b69d14;
-	letter-spacing: 8px;
 	font-size: 1em;
 	font-weight: bolder;	
 }
