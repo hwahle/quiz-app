@@ -184,6 +184,21 @@ var showUserTotalScore = (function(){
 	}
 
 })();
+// gives player a rating depending on how many questions they answered correct
+var giveUserRating = (function(){
+	var $userRating = $('#user-rating');
+
+	return function(){
+		if(correct >= 4){
+				$userRating.text("Expert");
+			} else if(correct === 3) {
+				$userRating.text("Fair");
+			} else {
+				$userRating.text("Beginner");
+			}	
+		}	
+
+})();
 
 })
 
