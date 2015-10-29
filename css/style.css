@@ -72,3 +72,13 @@ body {
     width: 300px;
     margin-left: 2px;
 }
+#start-over:hover,
+#next:hover,
+#answer-submit:hover,
+.quiz-area #option-1:hover,
+.quiz-area #option-2:hover,
+.quiz-area #option-3:hover,
+.quiz-area #option-4:hover,
+.intro-screen #start:hover {
+	background-color: #bfb1b1;
+}
