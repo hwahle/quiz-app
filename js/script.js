@@ -103,6 +103,87 @@ var setUserChoice = (function(){
 	}
 
 })();
+// hides the game area and displays the overlay showing the user if they got the answer correct or incorrect
+$userSubmit.submit(instead(submitSelection));
+
+function submitSelection(){
+	$quizArea.hide();
+	$overlay.fadeIn(1500);
+	checkUserSelection(userSelection);
+}
+// calls preventDefault to whatever you pass this function to
+function instead(fn){
+	return function(e){
+		e.preventDefault();
+		fn.apply(this);
+	};
+}
+
+// takes an argument and checks whether that input is the correct answer
+// sets the feedback section to correct or incorrect
+// shows user correct answer if they answered incorrectly
+// increments the correct and incorrect values
+var checkUserSelection = (function(){
+	var $currentQuestionFeedback = $('#current-question-feedback');
+	var $correctAnswer = $('#correct-answer');
+	var $displayCorrect = $('#display-correct');
+
+	return function(userInput){
+		if (userInput === questions[page].answer) {
+			$displayCorrect.hide();
+			$currentQuestionFeedback.text("Correct!");
+			$currentQuestionFeedback.css("color", "green");
+			correct++;
+		} else {
+			$displayCorrect.show();
+			$correctAnswer.text(questions[page].answer);
+			$currentQuestionFeedback.text("Incorrect");
+			$currentQuestionFeedback.css("color", "red");
+			incorrect++			
+		}		
+	}
+
+})();
+// calls displayNextQuestion function when user clicks on 'NEXT' button
+$nextButton.click(displayNextQuestion);
+
+// increments page and answered variables 
+// hides the overlay and shows next question in queue
+// clears user choice div in next question
+// shows user total score when they reach the end 
+function displayNextQuestion(){
+	page++;
+	answered++;
+	$overlay.hide();
+	$quizArea.fadeIn(3000);
+	setUserChoice("");
+	showUserTotalScore();
+	displayQuestion();
+}
+
+// starts quiz over again when user clicks on 'START OVER' button
+$reStartButton.click(startOver);
+
+// reloads page 
+function startOver(){
+	window.location.reload();	
+}
+
+// checks how many questions user has answered. if theyve reached the end, displays the total questions answered correctly
+var showUserTotalScore = (function(){
+	var $totalCorrect = $('#total-correct');
+
+	return function(){
+		if(answered === 5){		
+			$quizArea.hide();
+			$overlay.hide();
+			$totalCorrect.text(correct);		
+			$quizResults.show();
+			giveUserRating();
+		}			
+	}
+
+})();
 
 })
 
