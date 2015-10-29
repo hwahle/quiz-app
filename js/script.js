@@ -1,10 +1,12 @@
+$(document).ready(function() {
+
 // set global variables that will be used in functions 
 var userSelection;
 var correct;
 var incorrect;
 var page = 0;
 var answered = 0;
-var $quizArea = $('.qame-area');
+var $quizArea = $('.quiz-area');
 var $overlay = $('.overlay');
 var $quizResults = $('.quiz-results');
 var $reStartButton = $('#start-over');
@@ -12,6 +14,7 @@ var $startButton = $('#start');
 var $optionButton = $('.button'); 
 var $userSubmit = $('.user-submit');
 var $nextButton = $('#next');
+var $intro = $('.intro-screen');
 
 // JS objects 
 var questions = [{
@@ -44,3 +47,12 @@ var questions = [{
 	choices: ["Chilly", "Drunk", "Cozy", "Authentic"],
 	answer: "Cozy",		
 }]
+
+
+// hides questions, overlay, and quiz results area
+$quizArea.hide();
+$overlay.hide();
+$quizResults.hide();
+
+})
+
