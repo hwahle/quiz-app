@@ -63,8 +63,46 @@ function startGame(){
 	incorrect = 0;
 	$intro.fadeOut();
 	$quizArea.fadeIn(3000);
-	
+	displayQuestion();
 }
+
+// grabs all elements and sets them dynamically 
+var displayQuestion = (function(){	
+	var $current = $('#current-question');
+	var $currentQNum = $('#current-question-number');
+
+	return function(){
+		//sets current question to each index in questions array. if question does not exist, sets equal to empty string
+		var currentQuestion = questions[page] || "";
+		// sets choices to each question objects options. if questions does not exist, sets equal to empty string
+		var choices = currentQuestion.choices || "";
+		for(var i = 0; i < choices.length; i++){
+			$('#option-' + (i + 1)).text(choices[i]);	
+		}			
+		$current.text(currentQuestion.question);
+		$currentQNum.text(currentQuestion.qNum)
+	}
+
+})();
+
+// displays users selection when user clicks on an option
+$optionButton.click(getUserSelection);
+
+// grabs the value of the button selected and sets it to global variable userSelection
+// calls function setUserChoice() and passes userSelection to set that text of the div
+function getUserSelection(){
+	userSelection = $(this).text();		
+	setUserChoice(userSelection);
+}
+
+var setUserChoice = (function(){
+	var $userChoice = $('#user-choice');
+
+	return function(stringToSet){
+		$userChoice.text(stringToSet);
+	}
+
+})();
 
 })
 

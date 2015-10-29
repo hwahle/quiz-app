@@ -47,11 +47,33 @@ body {
 	font-size: 2em;
 }
 
-#user-choice,
-.quiz-area p {
+.quiz-area h1 {
+	font-size: 6em;
+	border-bottom: 1px solid #626f77;
+	margin-top: -32px;
+}
+
+.quiz-area h2 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 2em;
-	color: #da1010;
+	margin-top: -36px;
+	text-align: center;	
+	color: #626f77;
+}
+
+.quiz-area h3 {
+	font-family: 'Mallanna', sans-serif;
+	font-size: 1em;
+	margin-top: 42px;
+	text-align: center;	
+	color: #838994;
+}
+
+#user-choice,
+.quiz-area p {
+	font-family: 'Mallanna', sans-serif;
+	font-size: 1.5em;
+	color: #838994;
 	text-align: center;
 }
 
@@ -94,4 +116,97 @@ body {
 .quiz-area #option-4:hover,
 .intro-screen #start:hover {
 	background-color: #bfb1b1;
+}
+/*#answer-submit {
+	margin-top: 30px;
+}*/
+
+
+button {
+	outline: none;
+}
+
+#current-question {
+	text-align: center;
+    font-size: 1em;
+}
+
+.quiz-results,
+.overlay {
+	z-index: 1000;
+	display: none;
+	border-radius: 3px;
+	margin-top: -18px;	
+}
+
+.quiz-results h1,
+.overlay h1 {
+	font-size: 4em;
+	color: green;
+	border-bottom: 1px solid #626f77;
+}
+
+.overlay p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 1.5em;
+	color: #626f77;
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+.overlay img {
+	float: left;
+	margin-right: 10px;
+}
+
+#next {
+	margin-bottom: 22px;
+}
+
+.quiz-results h1 {
+	color: green;
+	margin-top: 176px;
+}
+
+.quiz-results p {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 2em;
+	color: #626f77;
+	text-align: center;
+	margin-top: 68px;
+}
+
+.quiz-results h2 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 8px;
+	font-size: 2em;
+	color: #626f77;
+	text-align: center;	
+}
+
+#user-rating {
+	color: #b69d14;
+	letter-spacing: 8px;
+	font-size: 1em;
+	font-weight: bolder;	
+}
+
+#rating {
+	margin-top: 1px;
+}
+
+#total-correct {
+	color: green;
+	font-weight: bolder;
+	margin-top: 12px;
+}
+
+#display-correct {
+	text-align: center;
+	margin-top: -18px;
+	color: green;
+}
+
+#correct-answer {
+	color: #626f77;
 }
