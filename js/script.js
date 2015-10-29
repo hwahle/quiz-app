@@ -1,3 +1,18 @@
+// set global variables that will be used in functions 
+var userSelection;
+var correct;
+var incorrect;
+var page = 0;
+var answered = 0;
+var $quizArea = $('.qame-area');
+var $overlay = $('.overlay');
+var $quizResults = $('.quiz-results');
+var $reStartButton = $('#start-over');
+var $startButton = $('#start');
+var $optionButton = $('.button'); 
+var $userSubmit = $('.user-submit');
+var $nextButton = $('#next');
+
 // JS objects 
 var questions = [{
 	question: "Copenhagen is the capital city of...",
