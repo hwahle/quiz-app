@@ -34,18 +34,41 @@ body {
     font-size: 1em;
   margin: 0;
     font-family: 'Mallanna', sans-serif;
+    font-weight: bolder;
+        color: #838994;
 }
 
-.intro-screen {
+.intro-screen,
+.quiz-area,
+.overlay,
+.quiz-results
+ {
 	text-align: center;
 	font-size: 2em;
 }
 
-#start {
+#start, #option-1, #option-2, #option-3, #option-4, #answer-submit, #start-over, #next {
 	cursor: pointer;
 	width: 200px;
     height: 40px;
     border-radius: 5px;
     font-size: 20px;
     box-shadow: 0px 0px 10px 0px black;
+}
+.quiz-area #option-1 {
+    width: 300px;
+    margin-right: 2px;
+    margin-bottom: 8px;
+}
+.quiz-area #option-2 {
+    width: 300px;
+    margin-left: 2px;
+}
+.quiz-area #option-3 {
+    width: 300px;
+    margin-right: 2px;
+}
+.quiz-area #option-4 {
+    width: 300px;
+    margin-left: 2px;
 }

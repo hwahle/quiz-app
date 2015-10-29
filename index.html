@@ -3,23 +3,49 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- Stylesheets -->
-		<link href='https://fonts.googleapis.com/css?family=Nixie+One|Mallanna' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/style.css"/> 
+	<link href='https://fonts.googleapis.com/css?family=Nixie+One|Mallanna' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css"/> 
 
-		<!-- JavaScript -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
+	<!-- JavaScript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 	<title>Copenhagen Quiz</title>
 </head>
 <body>
-<header class="masthead">
-<h1 class="masthead-heading">Copenhagen Quiz</h1>
-</header>
-<section class="intro-screen">
-<p>Put your Danish trivia skills to the test</p>
-<button id="start">START</button>
-</section>
-<section class="quiz-area">
-</section>
+	<header class="masthead">
+		<h1 class="masthead-heading">Copenhagen Quiz</h1>
+	</header>
+	<section class="intro-screen">
+		<p>Put your Danish trivia skills to the test</p>
+		<button id="start">START</button>
+	</section>
+	<section class="quiz-area">
+
+		<p>Question <span id="current-question-number"></span> of 5</p>
+		<p id="current-question"></p>
+		<button id="option-1" class="button"></button>
+		<button id="option-2" class="button"></button>
+		<button id="option-3" class="button"></button>
+		<button id="option-4" class="button"></button>
+		<form class="user-submit">
+		<button id="answer-submit">SUBMIT</button>				
+	</form>
+	</section>
+
+
+	<section class="overlay">
+		<h1 id="current-question-feedback"></h1>
+		<p id="display-correct">Correct Answer: <span id="correct-answer"></span></p>
+		<p id="description"></p>
+		<button id="next">NEXT</button>		
+	</section>
+	<section class="quiz-results">		
+		<h1>FINAL SCORE</h1>			
+		<p>You answered <span id="total-correct"></span> out of 5 questions correct.</p>
+		<p id="rating">Your rating: <span id="user-rating"></span></p>
+		<button id="start-over">START OVER</button>				
+		
+	</section>
+
 </body>
 </html>
